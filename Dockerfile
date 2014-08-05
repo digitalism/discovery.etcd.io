@@ -9,4 +9,4 @@ EXPOSE 8087
 ADD . /srv/discovery
 RUN cd /srv/discovery && ./build
 
-ENTRYPOINT ['/srv/discovery/devweb']
+CMD cd /srv/discovery && ./devweb
