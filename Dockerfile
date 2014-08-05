@@ -10,4 +10,4 @@ ADD . /srv/discovery
 RUN cd /srv/discovery && ./build
 COPY ./init/discovery.service /etc/systemd/user/
 
-ENTRYPOINT ['/sbin/init', 'systemctl enable discovery.service']
+ENTRYPOINT ['/srv/discovery/discovery']
