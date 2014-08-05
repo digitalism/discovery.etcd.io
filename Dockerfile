@@ -1,9 +1,7 @@
-FROM 
+FROM centos:centos7
 MAINTAINER Meng Zhuo "mengzhuo1203@gmail.com"
 
-RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y golang
-
+RUN yum install golang -y
 RUN mkdir /srv/discovery
 
 EXPOSE 8087
