@@ -25,3 +25,4 @@ there are two ENVs to control discovery:
 
 1. `DISCOVERY_ROOT_URL` : default https://discovery.etcd.io
 2. `DISCOVERY_ORIGIN_ADDR` : default http://127.0.0.1:4001
+3. `DISCOVERY_INIT_LEADER` : default 127.0.0.1:4001
