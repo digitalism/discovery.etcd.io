@@ -8,6 +8,5 @@ EXPOSE 8087
 
 ADD . /srv/discovery
 RUN cd /srv/discovery && ./build
-COPY ./init/discovery.service /etc/systemd/user/
 
-ENTRYPOINT ['/bin/bash']
+ENTRYPOINT ['/srv/discovery/devweb']
