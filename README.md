@@ -30,4 +30,15 @@ There are three ENVs to control discovery:
 2. `DISCOVERY_ORIGIN_ADDR` : default http://127.0.0.1:4001
 3. `DISCOVERY_INIT_LEADER` : default 127.0.0.1:4001
 
-Pass them like this: `docker run -d -p 8087:8087 -e DISCOVERY_ROOT_URL=https://mydomain.com IMAGE_NAME`
+Pass them like this: `docker run -d -p 8087:8087 -e DISCOVERY_ROOT_URL=https://YOURDOMAIN.com IMAGE_NAME`
+
+## Run in docker on CoreOS
+
+On a fresh install of [CoreOS](http://coreos.com), you may use the following commands. Note: this possibly insecure due to the use of `--net=host`.
+
+```
+git clone https://github.com/digitalism/discovery.etcd.io
+docker build -t discovery discovery.etcd.io
+etcd &
+docker run -P -e DISCOVERY_ROOT_URL=http://YOURDOMAIN.com:8087 --net=host -d discovery
+```
