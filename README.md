@@ -1,15 +1,14 @@
 # discovery.etcd.io
 
-The etcd discovery service, like the one at https://discovery.etcd.io. The API is documented in
+The etcd discovery service, like the one at [https://discovery.etcd.io](https://discovery.etcd.io).
 
-https://github.com/coreos/etcd/tree/master/Documentation/cluster-discovery.md
-https://github.com/coreos/etcd/tree/master/Documentation/discovery-protocol.md
+The API is documented in [cluster-discovery](https://github.com/coreos/etcd/tree/master/Documentation/cluster-discovery.md) and [discovery-protocol](https://github.com/coreos/etcd/tree/master/Documentation/discovery-protocol.md).
 
-This repository is forked from https://github.com/mengzhuo/discovery.etcd.io which in turn is forked from https://github.com/coreos/discovery.etcd.io.
+This repository is forked from [github.com/mengzhuo/discovery.etcd.io](https://github.com/mengzhuo/discovery.etcd.io) which in turn is forked from [github.com/coreos/discovery.etcd.io](https://github.com/coreos/discovery.etcd.io).
 
 ## Development
 
-discovery.etcd.io uses devweb for easy development. It is simple to get started:
+discovery.etcd.io uses `devweb` for easy development. It is simple to get started:
 
 ```
 ./devweb
@@ -34,7 +33,7 @@ Pass them like this: `docker run -d -p 8087:8087 -e DISCOVERY_ROOT_URL=https://Y
 
 ## Run in docker on CoreOS
 
-On a fresh install of [CoreOS](http://coreos.com), you may use the following commands. Note: this possibly insecure due to the use of `--net=host`.
+On a fresh install of [CoreOS](http://coreos.com), you may use the following commands. Note: this is possibly insecure due to the use of `--net=host`.
 
 ```
 git clone https://github.com/digitalism/discovery.etcd.io
